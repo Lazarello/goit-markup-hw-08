@@ -1,16 +1,56 @@
+
+
+//   ------------------DESKTOP
+// .features {
+//   display: flex;
+
+
+//   & &__item {
+//     flex-basis: calc((100% - 90px) / 4);
+//   }
+
+//   & &__item:not(:last-child) {
+//     margin-right: 30px;
+//   }
+
+//   &__title {
+//     margin-bottom: 10px;
+
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+//     color: var(--name-color);
+//   }
+//   &__text {
+//     font-size: 14px;
+//     line-height: 1.71;
+//     letter-spacing: 0.03em;
+//   }
+
+//   &__icon {
+//     content: "";
+//     height: 120px;
+//     width: 270px;
+//     border-radius: 4px;
+//     background-position: center;
+//     background-color: var(--team-bg);
+//     margin-bottom: 30px;
+//     background-repeat: no-repeat;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+
 .features {
-  display: flex;
 
-  & &__item {
-    flex-basis: calc((100% - 90px) / 4);
-  }
 
-  & &__item:not(:last-child) {
-    margin-right: 30px;
-  }
 
   &__title {
-    margin-bottom: 10px;
+    text-align: center;
+   margin-bottom: 10px;
 
     font-weight: 700;
     font-size: 14px;
@@ -20,25 +60,90 @@
     color: var(--name-color);
   }
   &__text {
+    
+    
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
   }
 
   &__icon {
+    
     content: "";
     height: 120px;
-    width: 270px;
+    width: 450px;
     border-radius: 4px;
     background-position: center;
     background-color: var(--team-bg);
     margin-bottom: 30px;
     background-repeat: no-repeat;
+    
     display: flex;
     align-items: center;
     justify-content: center;
   }
+}
 
-  @media screen and(min-width: 480px) {
+
+@media screen and (min-width: 768px) {
+  .container {
+   width: 768px;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: 0 auto;
+ }
+
+ .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+ }
+
+ .features__icon {
+  width: 354px;}
+
+  .features__item {
+    width: 354px;
   }
+
+  .features__title {
+    text-align: left;
+  
+ }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+  }
+
+.features {
+  display: flex;
+  flex-wrap: nowrap;
+
+
+  & &__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+
+  & &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  
+
+  .features__icon {
+    height: 120px;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 }
