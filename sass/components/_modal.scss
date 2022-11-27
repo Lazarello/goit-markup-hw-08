@@ -1,0 +1,221 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.backdrop.is-hidden {
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  width: 528px;
+  max-height: 581px;
+  background-color: var(--white-color);
+  border-radius: 4px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 12px;
+
+    color: var(--name-color);
+  }
+
+  &--close {
+    height: 30px;
+    width: 30px;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      fill: var(--btn-color);
+    }
+  }
+}
+
+.input-wrap {
+  position: relative;
+  margin-top: 4px;
+}
+
+.modal-form {
+  &__input {
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+      border-color: var(--btn-color);
+    }
+    &:focus + .modal-form__icon {
+      fill: var(--btn-color);
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+  &__label {
+    display: block;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+
+    color: var(--text-color);
+  }
+  &__comment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    outline: transparent;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &::placeholder {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+
+      color: rgba(117, 117, 117, 0.5);
+    }
+    &:focus {
+      border-color: var(--btn-color);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    fill: var(--name-color);
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__button {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    margin: 0 auto;
+    margin-top: 30px;
+    letter-spacing: 0.06em;
+    border: none;
+    color: var(--white-color);
+    width: 200px;
+    height: 50px;
+    background: var(--btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+      background: var(--btn-active);
+    }
+  }
+}
+.policy {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: #757575;
+
+  padding-left: 7px;
+
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked ~ .policy__checkbox-icon--check {
+      display: inline-block;
+    }
+  }
+
+  &__checkbox-icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+  &__checkbox-icon--check {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: none;
+  }
+}
+
+.policy a {
+  color: var(--btn-color);
+}
+
+.checkbox-policy {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

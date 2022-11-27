@@ -1,0 +1,25 @@
+.customer {
+  display: flex;
+  justify-content: space-between;
+
+  &__icon {
+    height: 92px;
+    width: 170px;
+    border: 1px solid var(--customer-color);
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--customer-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      border-color: var(--btn-color);
+      fill: var(--btn-color);
+    }
+  }
+}
