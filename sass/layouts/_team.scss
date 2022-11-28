@@ -6,6 +6,7 @@
   border-radius: 0px 0px 4px 4px;
 
   &__name {
+    text-align: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -14,6 +15,7 @@
   }
 
   &__position {
+    text-align: center;
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.18;
@@ -21,30 +23,71 @@
   }
 
   & &__name {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
+  }
+
+  &__photo {
+    width: 450px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
 .team-bg {
-  padding-bottom: 94px;
+  // padding-bottom: 94px;
+  padding-bottom: 60px;
   background-color: var(--team-bg);
 }
 
 .employee-bg .member {
   background-color: var(--white-color);
 }
+@media screen and(min-width: 768px) {
+  .employee-bg .member {
+    width: 354px;
+    .member__photo {
+      width: 354px;
+    }
+  }
+  .list-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .member:not(:last-child) {
+    margin-bottom: 0px;
+  }
+  
+}
 
-.list-flex {
-  display: flex;
+@media screen and(min-width: 1200px) {
+  .member {
+         text-align: center;
+      }
 
-  & .member {
-    text-align: center;
+  .list-flex {
+    flex-wrap: nowrap;
   }
 
-  & .member:not(:last-child) {
-    margin-right: 30px;
+  .employee-bg .member {
+    width: 270px;
+    .member__photo {
+      width: 270px;
+    }
   }
 }
+// .list-flex {
+//   display: flex;
+
+//   & .member {
+//     text-align: center;
+//   }
+
+//   & .member:not(:last-child) {
+//     margin-right: 30px;
+//   }
 
 .team-card {
   background: #ffffff;

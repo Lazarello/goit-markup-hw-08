@@ -6,17 +6,21 @@
 // }
 
 .container {
-  width: 100%;
+  width: 480;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
  .container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
+  width: 768px;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+ }
 }
 }
