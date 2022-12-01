@@ -1,10 +1,13 @@
 .customer {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 
   &__icon {
     height: 92px;
-    width: 170px;
+    // width: 170px;
+    width: 210px;
     border: 1px solid var(--customer-color);
     border-radius: 4px;
     background-position: center;
@@ -22,4 +25,16 @@
       fill: var(--btn-color);
     }
   }
+
+  @media screen and(min-width: 768px) {
+     .customer__icon {
+      width: 226px;
+     }
+    }
+
+    @media screen and(min-width: 1200px) {
+      .customer__icon {
+       width: 170px;
+      }
+     }
 }
