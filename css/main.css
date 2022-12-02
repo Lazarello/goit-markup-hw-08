@@ -90,7 +90,7 @@ body {
 }
 
 .container {
-  width: 480;
+  width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -364,11 +364,13 @@ body {
 }
 
 .logo {
-  margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: "Raleway";
+  font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--title-color);
   text-decoration: none;
@@ -378,7 +380,7 @@ body {
 }
 
 .site-nav {
-  display: flex;
+  display: none;
 }
 .site-nav__link {
   position: relative;
@@ -405,7 +407,7 @@ body {
 }
 
 .contact {
-  display: flex;
+  display: none;
 }
 .contact .contact__item + .contact__item {
   margin-left: 50px;
@@ -451,6 +453,35 @@ body {
   height: 4px;
   background: var(--btn-color);
   border-radius: 2px;
+}
+
+.mobile-menu {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: var(--white-color);
+}
+
+.header__menu-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.header__menu-close {
+  height: 40px;
+  width: 40px;
+  background-color: var(--white-color);
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-15px, 10px);
 }
 
 .hero {
