@@ -60,13 +60,13 @@
             >
           </li>
         </ul>
-        <button type="button" class="header__menu-button"><div class="header__menu-icon">
+        <button type="button" class="header__menu-button" data-menu-open><div class="header__menu-icon">
           <svg width="40" height="40">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </div></button>
       </div>
-      <div class="mobile-menu">
+      <div class="mobile-menu is-hidden" data-menu>
         <div class="container"><ul class="list emphasis mobile-nav">
           <li class="mobile-nav__item">
             <a href="./index.html" class="mobile-nav__link current">Студія</a>
@@ -80,27 +80,28 @@
         </ul>
         <ul class="list emphasis mobile-contact">
           <li class="mobile-contact__item">
-            <a href="mailto:info@devstudio.com" class="mobile-contact__link">
-              
-
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact__item">
-            <a href="tel:+380961111111" class="contact__link">
+            <a href="tel:+380961111111" class="mobile-contact__phone">
               
 
               +38 096 111 11 11</a
             >
           </li>
+          <li class="mobile-contact__item">
+            <a href="mailto:info@devstudio.com" class="mobile-contact__mail">
+              
+
+              info@devstudio.com</a
+            >
+          </li>
+          
         </ul>
         <ul class="mobile-menu-soc list emphasis">
-          <li class="mobile-menu-soc__link"><a href="">instagram</a></li>
-          <li class="mobile-menu-soc__link"><a href="">twitter</a></li>
-          <li class="mobile-menu-soc__link"><a href="">facebook</a></li>
-          <li class="mobile-menu-soc__link"><a href="">linkedin</a></li>
+          <li class="mobile-menu-soc__link"><a href="">Instagram</a></li>
+          <li class="mobile-menu-soc__link"><a href="">Twitter</a></li>
+          <li class="mobile-menu-soc__link"><a href="">Facebook</a></li>
+          <li class="mobile-menu-soc__link"><a href="">LinkedIn</a></li>
         </ul>
-        <button type="button" class="header__menu-close"><div class="header__menu-icon">
+        <button type="button" class="header__menu-close" data-menu-close><div class="header__menu-icon">
           <svg width="40" height="40">
             <use href="./images/icons.svg#icon-menu-close"></use>
           </svg>
@@ -110,16 +111,16 @@
     </header>
     <main>
       <!-- Hero -->
-      <!-- <section class="hero--background hero">
+      <section class="hero--background hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="hero__button" data-modal-open>
             Замовити послугу
           </button>
         </div>
-      </section>  -->
+      </section>
       <!-- Features -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Наші переваги</h2>
           <ul class="list features">
@@ -172,9 +173,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section> 
       <!-- What we do -->
-       <!-- <section class="section-wwd">
+       <section class="section-wwd">
         <div class="container display-none">
           
             <h2 class="title">Чим ми займаємося</h2>
@@ -201,9 +202,9 @@
             </li>
           </ul>
       </div>
-      </section> -->
+      </section>
       <!-- Team -->
-      <!-- <section class="section ">
+      <section class="section ">
         <div class="container team-bg">
           <h2 class="title">Наша команда</h2>
           <ul class="list employee-bg list-flex">
@@ -377,9 +378,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Customers -->
-      <!-- <section class="section">
+       <section class="section">
         <div class="container">
           <h2 class="title">Постійні клієнти</h2>
           <ul class="list customer">
@@ -588,7 +589,8 @@
           <button type="submit" class="modal-form__button">Відправити</button>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

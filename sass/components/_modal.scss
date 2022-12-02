@@ -12,11 +12,7 @@
   transform: translate(-50%, -50%) scale(0);
 }
 
-.backdrop.is-hidden {
-  opacity: 1;
-  visibility: hidden;
-  pointer-events: none;
-}
+
 
 .modal {
   width: 450px;
