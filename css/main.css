@@ -136,8 +136,8 @@ body {
 }
 
 .modal {
-  width: 528px;
-  max-height: 581px;
+  width: 450px;
+  max-height: 609px;
   background-color: var(--white-color);
   border-radius: 4px;
   padding: 40px;
@@ -291,8 +291,9 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
   color: #757575;
   padding-left: 7px;
 }
@@ -314,13 +315,13 @@ body {
 }
 .policy__checkbox-icon {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 6px;
+  left: -12px;
 }
 .policy__checkbox-icon--check {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 6px;
+  left: -12px;
   display: none;
 }
 
@@ -335,6 +336,24 @@ body {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    max-height: 581px;
+  }
+  .policy__checkbox-icon {
+    top: 12px;
+    left: 0;
+  }
+  .policy__checkbox-icon--check {
+    top: 12px;
+    left: 0;
+  }
+  .policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .header {
   border-bottom: 1px solid #ececec;
 }
