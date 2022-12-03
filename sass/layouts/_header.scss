@@ -154,6 +154,11 @@
   margin-top: 30px;
 }
 
+.mobile-nav__link {
+  text-decoration: none;
+  text-decoration-color: var(--text-color);
+}
+
 .mobile-contact {
   margin-top: 302px;
   margin-left: 25px;
@@ -246,7 +251,7 @@
 
   .site-nav {
     display: flex;
-    padding-left: 87px;
+    margin-left: 87px;
   }
 
   .contact {
@@ -263,7 +268,17 @@
   }
 
   .contact__item + .contact__item {
-    padding-top: 10px;
+   margin-top: 10px;
+  }
+  
+  .contact .contact__item {
+    
+    margin-right: 0;
+}
+
+  .contact__icon {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -273,4 +288,7 @@
     align-items: baseline;
     flex-direction: row;
   }
+  .contact .contact__item+.contact__item {
+    margin-left: 50px;
+}
 }

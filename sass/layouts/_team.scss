@@ -36,10 +36,10 @@
 }
 
 .team-bg {
+
   // padding-bottom: 94px;
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--team-bg);
+  min-width: 480px;
 }
 
 .employee-bg .member {
@@ -67,6 +67,10 @@
   .member {
          text-align: center;
       }
+
+  .section {
+    padding-top: 94px;
+  }
 
   .list-flex {
     flex-wrap: nowrap;

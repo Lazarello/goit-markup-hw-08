@@ -8,7 +8,7 @@
     margin: 0 auto;
     text-align: center;
     // max-width: 1600px;
-    max-width: 100%;
+    min-width: 480px;
     background-color: var(--secondary-grey);
 
     background-image: linear-gradient(
@@ -107,4 +107,13 @@ color: #FFFFFF;
 
     
   }
+}
+  
+
+@media screen and(min-width:1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  
 }

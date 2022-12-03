@@ -22,6 +22,12 @@ body {
 
 .section {
   padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+
+.section-wwd {
+  padding-bottom: 94px;
 }
 
 .is-hidden {
@@ -33,7 +39,6 @@ body {
 @media screen and(min-width:1200px) {
   .section {
     padding-bottom: 94px;
-    padding-top: 94px;
   }
   
 }

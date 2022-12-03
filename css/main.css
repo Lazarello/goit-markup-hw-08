@@ -43,6 +43,7 @@ input {
 
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 textarea {
@@ -57,6 +58,11 @@ body {
 
 .section {
   padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.section-wwd {
+  padding-bottom: 94px;
 }
 
 .is-hidden {
@@ -68,7 +74,6 @@ body {
 @media screen and (min-width: 1200px) {
   .section {
     padding-bottom: 94px;
-    padding-top: 94px;
   }
 }
 :root {
@@ -164,22 +169,19 @@ body {
   margin-bottom: 12px;
   color: var(--name-color);
 }
-.modal--close {
-  height: 30px;
-  width: 30px;
-  background-color: var(--white-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+
+.modal-close-icon {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  fill: black;
+  top: 5px;
+  left: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal--close:hover, .modal--close:focus {
+.modal-close-icon:hover, .modal-close-icon:focus {
   fill: var(--btn-color);
 }
 
@@ -291,6 +293,17 @@ body {
 }
 .modal-form__button:focus, .modal-form__button:hover {
   background: var(--btn-active);
+}
+
+.modal--close {
+  height: 30px;
+  width: 30px;
+  background-color: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
 .policy {
@@ -488,6 +501,12 @@ body {
   margin-top: 30px;
 }
 
+.mobile-nav__link {
+  text-decoration: none;
+  -webkit-text-decoration-color: var(--text-color);
+          text-decoration-color: var(--text-color);
+}
+
 .mobile-contact {
   margin-top: 302px;
   margin-left: 25px;
@@ -577,7 +596,7 @@ body {
   }
   .site-nav {
     display: flex;
-    padding-left: 87px;
+    margin-left: 87px;
   }
   .contact {
     display: flex;
@@ -591,7 +610,14 @@ body {
     margin-left: 0;
   }
   .contact__item + .contact__item {
-    padding-top: 10px;
+    margin-top: 10px;
+  }
+  .contact .contact__item {
+    margin-right: 0;
+  }
+  .contact__icon {
+    width: 14px;
+    height: 14px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -599,6 +625,9 @@ body {
     display: flex;
     align-items: baseline;
     flex-direction: row;
+  }
+  .contact .contact__item + .contact__item {
+    margin-left: 50px;
   }
 }
 .hero {
@@ -608,7 +637,7 @@ body {
 .hero--background {
   margin: 0 auto;
   text-align: center;
-  max-width: 100%;
+  min-width: 480px;
   background-color: var(--secondary-grey);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -673,8 +702,11 @@ body {
   background-color: var(--btn-active);
 }
 
-.features {
-  padding-top: 60px;
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .features__title {
   text-align: center;
@@ -826,9 +858,8 @@ body {
 }
 
 .team-bg {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--team-bg);
+  min-width: 480px;
 }
 
 .employee-bg .member {
@@ -854,6 +885,9 @@ body {
 @media screen and (min-width: 1200px) {
   .member {
     text-align: center;
+  }
+  .section {
+    padding-top: 94px;
   }
   .list-flex {
     flex-wrap: nowrap;
@@ -940,6 +974,9 @@ body {
   }
 }
 
+.logo {
+  padding: 0;
+}
 .logo--white {
   color: var(--white-color);
 }
@@ -976,6 +1013,7 @@ body {
 }
 .footer-bg {
   background-color: var(--back-color);
+  min-width: 480px;
 }
 .footer-logo {
   display: inline-block;
@@ -1127,8 +1165,8 @@ body {
 @media screen and (min-width: 768px) {
   .footer-tablet {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-around;
+    align-items: baseline;
   }
   .footer-soc {
     margin-top: 0px;
