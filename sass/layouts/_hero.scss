@@ -10,16 +10,26 @@
     // max-width: 1600px;
     min-width: 480px;
     background-color: var(--secondary-grey);
-
+    
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      // url(../images/hero-bg.jpg);
       url(../images/hero-bg-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: (
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ), url(../images/hero-bg-mobile-2x.jpeg);
+  }
+      
+    
 
     @media screen and (min-width: 768px) {
       
@@ -117,3 +127,4 @@ color: #FFFFFF;
   }
   
 }
+
